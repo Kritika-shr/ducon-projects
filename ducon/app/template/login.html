@@ -1,0 +1,36 @@
+<div class="content-section-b">
+<div class="container">
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<section>
+   <div class="textintro">
+      <h1>Hi there!</h1>
+      <p>Log-in to access the awesomeness!</p>
+      <p class="message" 
+        ng-show="message">{{ message }}</p>
+      <p class="error" 
+        ng-show="error">{{ error }}</p>  
+    </div>
+
+    <form name="loginform" ng-submit="login()" novalidate>
+  <div class="form-group" style="margin-top: 20px;">
+    <label for="InputEmail1">Email address</label>
+    <input type="email" class="form-control" placeholder="Email" name="email" ng-required="true" ng-model="user.email" value="">
+     <div class="error" ng-show="myform.email.$invalid && myform.email.$touched">You Must Enter a valid Email</div>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" placeholder="Password" name="password" ng-model="user.password" ng-minlength="6">
+  </div>
+    <div class="error" ng-show="myform.password.$invalid && myform.password.$touched">Password must be at least 6 digits</div>
+  
+   <button type="submit" class="btn btn-default">Submit</button>
+   <a href="#forget-password" class="btn">Forget Password</a>
+</form>
+</section>
+</div>
+<div class="col-md-3"></div>
+</div>
+</div>
+</div>
